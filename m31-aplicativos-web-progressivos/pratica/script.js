@@ -61,3 +61,15 @@ window.removeEntry = function(index) {
 
 //Roda a listagem assim a página recarrega pela primeira vez
 renderEntries(); 
+
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Impede que o banner padrão do Chrome apareça imediatamente
+    e.preventDefault();
+    // Guarda o evento para disparar quando o usuário clicar no seu botão
+    deferredPrompt = e;
+    
+    console.log('O app está pronto para ser instalado!');
+    // Se quiser, aqui você poderia exibir um botão de "Instalar" na tela.
+});
