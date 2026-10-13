@@ -1,0 +1,109 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f6f8fa;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+h1 {
+  color: #007bff;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccd;
+  border-radius: 4px;
+}
+
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#btnInstall {
+  background: #a9c0d8;
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  display: none;
+}
+
+#btnInstall:hover {
+  background: #91a5bb;
+}
+
+#flashcards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background: #e9ecef;
+  border-radius: 6px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  transition: background 0.2s;
+}
+
+.card:hover {
+  background: #cce6ff;
+}
+
+/* Estilo para a área do texto */
+.card-texto {
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Estilo para o botão de excluir (X) */
+.btn-excluir {
+  background: transparent;
+  color: #dc3545;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-excluir:hover {
+  background: rgba(220, 53, 69, 0.15);
+}
