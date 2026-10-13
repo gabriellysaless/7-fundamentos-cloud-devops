@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px;
+}
+
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+input,button {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.entry {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    max-width: 300px;
+    border-radius: 4px;
+}
+
+.entry h3 {
+    margin: 0 0 5px 0;
+}
+
+.entry p {
+    margin: 0 0 5px 0;
+}
+
+.entry button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+}
