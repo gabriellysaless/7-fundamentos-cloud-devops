@@ -24,9 +24,10 @@ No relatório inicial obtido com o **Lighthouse (Mobile)**, a aplicação aprese
 Para corrigir os gargalos, as seguintes otimizações foram implementadas:
 1. **Conversão e Redimensionamento de Imagens:** As imagens foram convertidas para o formato moderno **WebP**, redimensionadas e reduzidas a qualidade sem deixar a imagem com um visual ruim por meio do squoosh.app, reduzindo drasticamente o peso de mb para poucos kb.
 2. **Implementação de Lazy Loading:** Adição do atributo `loading="lazy"` nas imagens posicionadas abaixo da primeira dobra.
-3. **Preload do Elemento Crítico (LCP):** Inclusão de `<link rel="preload">` para a imagem de fundo do *Hero*, priorizando seu carregamento.
-4. **Prevenção de Layout Shift:** Inclusão explícita de atributos `width` e `height` nas tags de imagem.
-5. **Organização do Código:** Limpeza de código e estruturação correta de pastas (`/images`).
+3. **Minificação por meio do Minify:** Extensão Minify para fazer a minificação dos arquivos (*.min*)
+4. **Preload do Elemento Crítico (LCP):** Inclusão de `<link rel="preload">` para a imagem de fundo do *Hero*, priorizando seu carregamento.
+5. **Prevenção de Layout Shift:** Inclusão explícita de atributos `width` e `height` nas tags de imagem.
+6. **Organização do Código:** Limpeza de código e estruturação correta de pastas (`/images`).
 
 ---
 
