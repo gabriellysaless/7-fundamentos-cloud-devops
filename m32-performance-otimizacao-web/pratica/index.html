@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Viagens - Explore o Mundo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="/m32-performance-otimizacao-web/pratica/images/background.webp" as="image" type="image/webp">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Descubra os Destinos Mais Incríveis do Planeta</h1>
+            <p>Sua próxima grande aventura começa aqui. Veja nossa galeria exclusiva.</p>
+            <a href="#galeria" class="btn">Ver Destinos</a>
+        </div>
+    </header>
+
+    <main id="galeria" class="container">
+        <h2>Nossa Galeria de Fotos</h2>
+        <p class="subtitle">Clique em "Saiba Mais" para ver os detalhes de cada destino.</p>
+
+        <div class="grid-galeria">
+            <div class="card">
+                <img src="/m32-performance-otimizacao-web/pratica/images/yosemite.webp" alt="Paisagem Montanha" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                    <h3>Yosemite National Park</h3>
+                    <p>Natureza selvagem e trilhas inesquecíveis.</p>
+                    <button class="btn-detalhes" data-destino="Yosemite" data-info="Localizado na Serra Nevada da Califórnia, é famoso por suas sequoias gigantes, cachoeiras impressionantes e os paredões de granito de El Capitan e Half Dome. Ideal para trilhas e acampamentos.">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/m32-performance-otimizacao-web/pratica/images/floresta.webp" alt="Floresta Nebulosa" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                    <h3>Floresta Encantada</h3>
+                    <p>O verde profundo das matas fechadas.</p>
+                    <button class="btn-detalhes" data-destino="Floresta Encantada" data-info="Uma imersão completa na biodiversidade local. Conhecida por sua neblina matinal constante, árvores centenárias e uma atmosfera mágica que atrai fotógrafos e naturalistas do mundo todo.">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/m32-performance-otimizacao-web/pratica/images/alpinos.webp" alt="Vale Verde" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                    <h3>Vales Alpinos</h3>
+                    <p>Paz e tranquilidade nas montanhas.</p>
+                    <button class="btn-detalhes" data-destino="Vales Alpinos" data-info="Paisagens esculpidas por geleiras ancestrais, ofreciendo prados verdejantes no verão e vales nevados deslumbrantes no inverno. Um paraíso para quem busca paz e vistas panorâmicas de tirar o fôlego.">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/m32-performance-otimizacao-web/pratica/images/serra.webp" alt="Nascer do Sol na Mata" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                    <h3>Alvorecer na Serra</h3>
+                    <p>Os primeiros raios de sol entre as árvores.</p>
+                    <button class="btn-detalhes" data-destino="Alvorecer na Serra" data-info="Experimente a magia dos primeiros raios de sol cortando a neblina matinal da serra. Um cenário perfeito para contemplação da natureza, fotografia de paisagem e caminhadas matinais revigorantes.">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/m32-performance-otimizacao-web/pratica/images/cachoeira.webp" alt="Cascata" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                    <h3>Cachoeira Cristalina</h3>
+                    <p>Águas puras e revigorantes.</p>
+                    <button class="btn-detalhes" data-destino="Cachoeira Cristalina" data-info="Localizada em meio a uma vegetação preservada, esta queda d'água impressiona pela pureza de suas águas cristalinas. É o destino favorito para quem quer se refrescar e entrar em contato direto com as riquezas naturais locais.">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="/m32-performance-otimizacao-web/pratica/images/campos.webp" alt="Campos Floridos" width="800" height="600" loading="lazy">
+                <div class="card-body">
+                    <h3>Campos de Inverno</h3>
+                    <p>Paisagens bucólicas e horizontes abertos.</p>
+                    <button class="btn-detalhes" data-destino="Campos de Inverno" data-info="Horizontes amplos, clima ameno e paisagens de tirar o fôlego caracterizam esta região. Excelente escolha para piqueniques, passeios de bicicleta ou simplesmente relaxar observando o pôr do sol nos campos.">Saiba Mais</button>
+                </div>
+            </div>
+        </div>
+        <div id="painel-detalhes" class="detalhes-box oculto">
+            <h3 id="detalhe-titulo">Selecione um destino</h3>
+            <p id="detalhe-texto">Clique no botão de qualquer card acima para carregar as informações detalhadas sobre o pacote de viagens.</p>
+            <button id="fechar-detalhes" class="btn-fechar">Fechar</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Galeria de Viagens. Todos os direitos reservados.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
