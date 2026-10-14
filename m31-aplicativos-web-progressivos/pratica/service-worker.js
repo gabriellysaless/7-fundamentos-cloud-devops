@@ -1,8 +1,8 @@
-const CACHE_NAME = 'diary-cache-v1';
+const CACHE_NAME = 'diary-cache-v2';
 const URLS_CACHE = [
     './',
     './index.html',
-    './styles.css',
+    './style.css',
     './script.js',
     './manifest.json',
     './icons/icon-192x192.png',

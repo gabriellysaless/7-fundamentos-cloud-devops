@@ -62,10 +62,22 @@ window.removeEntry = function(index) {
 //Roda a listagem assim a página recarrega pela primeira vez
 renderEntries(); 
 
+// Registra o Service Worker para habilitar o funcionamento offline e PWA
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+            .then((registration) => {
+                console.log('Service Worker registrado com sucesso! Escopo:', registration.scope);
+            })
+            .catch((error) => {
+                console.log('Falha ao registrar o Service Worker:', error);
+            });
+    });
+}
+
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
-    // Impede que o banner padrão do Chrome apareça imediatamente
     e.preventDefault();
     // Guarda o evento para disparar quando o usuário clicar no seu botão
     deferredPrompt = e;
