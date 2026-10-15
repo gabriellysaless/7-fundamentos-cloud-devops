@@ -5,7 +5,9 @@ Projeto desenvolvido como parte do exercício prático de diagnóstico, otimiza�
 ---
 
 ## 📋 Descrição do Projeto
-Uma aplicação web interativa de galeria de viagens contendo:
+A Galeria de Viagens é uma aplicação web interativa que apresenta destinos turísticos por meio de imagens e cartões informativos.
+
+O projeto contém:
 - Seção principal (*Hero*) com imagem de destaque.
 - Grade de destinos turísticos com cartões informativos.
 - Sistema de interatividade via JavaScript para exibir detalhes dinâmicos de cada destino.
@@ -17,11 +19,12 @@ No relatório inicial obtido com o **Lighthouse (Mobile)**, a aplicação aprese
 - **Imagens pesadas e não dimensionadas:** Uso de fotos em alta resolução direta da web (acima de 4000px), gerando um LCP (*Largest Contentful Paint*) elevado.
 - **Falta de Lazy Loading:** Todas as imagens da página eram carregadas imediatamente no acesso inicial, consumindo largura de banda desnecessária.
 - **Ausência de dimensões fixas (`width`/`height`):** Causava pequenas movimentações no layout durante o carregamento.
+- **Arquivos sem minificação:** possibilidade de reduzir o tamanho dos arquivos HTML, CSS e JavaScript por meio da remoção de caracteres desnecessários.
 
 ---
 
 ## 🚀 2. Melhorias e Técnicas Aplicadas
-Para corrigir os gargalos, as seguintes otimizações foram implementadas:
+Para reduzir os gargalos, as seguintes otimizações foram implementadas:
 1. **Conversão e Redimensionamento de Imagens:** As imagens foram convertidas para o formato moderno **WebP**, redimensionadas e reduzidas a qualidade sem deixar a imagem com um visual ruim por meio do squoosh.app, reduzindo drasticamente o peso de mb para poucos kb.
 2. **Implementação de Lazy Loading:** Adição do atributo `loading="lazy"` nas imagens posicionadas abaixo da primeira dobra.
 3. **Minificação por meio do Minify:** Extensão Minify para fazer a minificação dos arquivos (*.min*)
@@ -34,12 +37,35 @@ Para corrigir os gargalos, as seguintes otimizações foram implementadas:
 ## 📊 3. Comparativo de Resultados (Antes e Depois)
 
 ### 🔴 Antes da Otimização
-- **Performance:** ~68
-- **Métricas:** LCP alto e carregamento pesado em rede móvel simulada.
+#### Lighthouse:
+![Lighthouse antes da otimização](/m32-performance-otimizacao-web/pratica/performance-images/lighthouse-antes.png)
+#### Métricas Locais:
+![Local Metrics antes da otimização](/m32-performance-otimizacao-web/pratica/performance-images/local-metrics-antes.png)
+- **Performance:** ~65.
+- **LCP:** 0,55 s.
+- **CLS:** 0.
+- **INP:** 328 ms.
 
 ### 🟢 Depois da Otimização
+#### Lighthouse:
+![Lighthouse depois da otimização](/m32-performance-otimizacao-web/pratica/performance-images/lighthouse-depois.png)
+#### Métricas Locais:
+![Local Metrics depois da otimização](/m32-performance-otimizacao-web/pratica/performance-images/local-metrics-depois.png)
 - **Performance:** **100** 🚀
-- **Métricas:** Ganhos expressivos de velocidade, carregamento otimizado e excelente experiência do usuário.
+- **LCP:** 0,12 s.
+- **CLS:** 0.
+- **INP:** 32 ms.
+- Ganhos expressivos de velocidade, carregamento otimizado e excelente experiência do usuário.
+
+---
+
+## 📈 Análise dos resultados
+
+A comparação original demonstra uma redução no LCP de 0,55 s para 0,12 s e no INP de 328 ms para 32 ms. O CLS permaneceu em 0 nas capturas apresentadas.
+
+A pontuação de Performance passou de 65 para 100 pontos.
+
+Esses resultados devem ser interpretados considerando as condições de cada execução. Uma pontuação isolada não comprova que uma técnica específica foi responsável por toda a melhoria.
 
 ---
 
