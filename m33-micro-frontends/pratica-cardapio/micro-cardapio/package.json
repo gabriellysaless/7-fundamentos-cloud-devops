@@ -11,10 +11,10 @@
   "dependencies": {
     "next": "14.2.35",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "@module-federation/nextjs-mf": "8.8.41"
   },
   "devDependencies": {
-    "@module-federation/nextjs-mf": "^8.8.76",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -22,6 +22,9 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
     "typescript": "^5",
-    "webpack": "5.111.1"
+    "webpack": "5.101.3"
+  },
+  "overrides": {
+    "enhanced-resolve": "5.20.1"
   }
 }
