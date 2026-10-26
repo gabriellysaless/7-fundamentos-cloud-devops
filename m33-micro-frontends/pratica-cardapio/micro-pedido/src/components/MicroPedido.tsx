@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "../styles/MicroPedido.module.css";
 
 export default function MicroPedido() {
     
@@ -16,17 +17,19 @@ export default function MicroPedido() {
             }
         }, [])
     return (
-        <>
-            <h2>Pedido</h2>
+        <div className={styles.pedido}>
+            <h2 className={styles.titulo}>Pedido</h2>
             {produtos.length === 0 ? (
-                <p>Nenhum produto adicionado</p>
+                <p className={styles.vazio}>Nenhum produto adicionado</p>
             ) : (
-                    <ul>
+                    <ul className={styles.lista}>
                         {produtos.map((produto, index) => (
-                            <li key={`${produto}-${index}`}>{produto}</li>
+                            <li key={`${produto}-${index}`} className={styles.item}>
+                                {produto}
+                            </li>
                         ))}
                     </ul>
             )}
-        </>
+        </div>
     )
 }

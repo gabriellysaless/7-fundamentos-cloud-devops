@@ -1,14 +1,19 @@
+import styles from "../styles/MicroCardapio.module.css";
+
 export default function MicroCardapio() {
     const cardapio = ['Macarrão à Carbonara', 'Filé à Parmegiana', 'Lasanha']
 
     return(
-        <>
-            <h2>Micro Cardápio</h2>
-            <ul>
+        <div className={styles.cardapio}>
+            <h2 className={styles.titulo}>Micro Cardápio</h2>
+            <ul className={styles.lista}>
                 {cardapio.map((produto) =>(
-                    <li key={produto}>
-                        {produto}
+                    <li key={produto} className={styles.item}>
+                        <span className={styles.nome}>
+                            {produto}
+                        </span>
                         <button
+                            className={styles.botao}
                             onClick={() => {
                                 window.dispatchEvent( //dispara o evento para que o MicroPedido possa "escutá-lo" depois
                                     new CustomEvent('adicionarProduto', {
@@ -22,6 +27,6 @@ export default function MicroCardapio() {
                     </li>
                 ))}
             </ul>
-        </>
+        </div>
     )
 }
